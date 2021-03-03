@@ -5,12 +5,13 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import { convertWeitToBnb } from "./features/helpers";
 import { getBalanceBnb } from "./features/configure/web3";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
-import { Alert } from "antd";
-
+import { Alert, Layout } from "antd";
 import "./App.css";
+import HeaderWeb from "./components/Header";
+
 let web3Modal;
 let provider;
-
+const { Header, Footer, Content } = Layout;
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider,
@@ -121,8 +122,15 @@ function App() {
   });
   return (
     <>
-      {error ? <Alert type="error" message={error} banner /> : ""}
-      {balance}
+      <Layout>
+        <Header style={{ textAlign: "center" }}>
+          {" "}
+          {error ? <Alert type="error" message={error} banner /> : ""}
+          <HeaderWeb />
+        </Header>
+        <Content style={{ textAlign: "center" }}> {balance}</Content>
+        <Footer style={{ textAlign: "center" }}>Footer</Footer>
+      </Layout>
     </>
   );
 }

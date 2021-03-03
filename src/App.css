@@ -1,16 +1,29 @@
-.App {
+@font-face {
+  font-family: "aldithregular";
+  src: url("aldith-webfont.woff2") format("woff2"),
+    url("aldith-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+aldith .App {
   text-align: center;
+  background: #000;
+  color: #ffcb05;
+}
+body {
+  text-align: center;
+  background: #000;
+  color: #ffcb05;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-layout-header,
+.ant-layout-content,
+.ant-layout-footer {
+  height: 64px;
+  padding: 0 50px;
+  color: #ffcb05 !important;
+  line-height: 64px;
+  background: #000 !important;
 }
 
 .App-header {
@@ -21,18 +34,14 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffcb05;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-typography,
+.tituloh1 {
+  font-family: "aldithregular";
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 36px;
+  line-height: 45px;
 }
