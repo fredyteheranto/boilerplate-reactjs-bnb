@@ -8,10 +8,11 @@ import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import { Alert, Layout } from "antd";
 import "./App.css";
 import HeaderWeb from "./components/Header";
+import Contenido from "./components/Content";
 
 let web3Modal;
 let provider;
-const { Header, Footer, Content } = Layout;
+const { Content } = Layout;
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider,
@@ -123,13 +124,12 @@ function App() {
   return (
     <>
       <Layout>
-        <Header style={{ textAlign: "center" }}>
-          {" "}
+        <Content style={{ textAlign: "center" }}>
           {error ? <Alert type="error" message={error} banner /> : ""}
           <HeaderWeb />
-        </Header>
-        <Content style={{ textAlign: "center" }}> {balance}</Content>
-        <Footer style={{ textAlign: "center" }}>Footer</Footer>
+          <Contenido />
+          {balance}
+        </Content>
       </Layout>
     </>
   );

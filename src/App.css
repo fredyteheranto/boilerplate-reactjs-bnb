@@ -45,3 +45,18 @@ body {
   font-size: 36px;
   line-height: 45px;
 }
+.bienven {
+  background-image: url("./images/box-001.png");
+  width: 490px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 380px;
+  margin: 0 auto;
+  padding: 70px;
+  font-weight: bold;
+}
+
+.bienven > p {
+  color: #000002 !important;
+  line-height: 20px;
+}
