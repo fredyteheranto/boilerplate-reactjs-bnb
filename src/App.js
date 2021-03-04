@@ -107,6 +107,7 @@ const inject = async () => {
 function App() {
   const [balance, setBalance] = useState(0);
   const [error, setError] = useState(null);
+  const [account, setaccount] = useState(null);
   useEffect(() => {
     const initialize = async () => {
       const injected = await inject();
@@ -115,6 +116,7 @@ function App() {
         return;
       } else {
         const accounts = await window.web3.eth.getAccounts();
+        setaccount(accounts);
         const weibnb = await getBalanceBnb(accounts[0]);
         await setBalance(convertWeitToBnb(weibnb));
       }
@@ -128,7 +130,7 @@ function App() {
           {error ? <Alert type="error" message={error} banner /> : ""}
           <HeaderWeb />
           <Contenido />
-          {balance}
+          {account} | {balance} BNB
         </Content>
       </Layout>
     </>
