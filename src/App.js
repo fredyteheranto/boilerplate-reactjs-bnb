@@ -67,20 +67,6 @@ const providerOptions = {
 };
 
 const inject = async () => {
-  try {
-    web3Modal = new Web3Modal({
-      cacheProvider: true,
-      providerOptions,
-      disableInjectedProvider: false,
-    });
-    provider = await web3Modal.connect();
-    window.web3 = new Web3(provider);
-    console.log("Conect");
-    return true;
-  } catch (err) {
-    console.error(err);
-  }
-
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     window.ethereum.enable();

@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-aldith .App {
+.App {
   text-align: center;
   background: #000;
   color: #ffcb05;
@@ -65,8 +65,20 @@ body {
   padding: 70px;
   font-weight: bold;
 }
+.box-inversion {
+  position: relative;
+  background-image: url("./images/box-003.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 590px;
+  margin: 0 auto;
+  padding: 70px;
+  font-weight: bold;
+  background-size: cover;
+}
 .pdf-box {
-  width: 490px;
+  width: 755px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -112,7 +124,40 @@ p.titke {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.ant-menu-horizontal > .ant-menu-item a {
+  color: #ffcb05 !important;
+  font-family: "aldithregular";
+  font-size: 30px;
+}
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+  color: #ffcb05 !important;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  color: #ffcb05 !important;
+  border-bottom: 2px solid #ffcb05 !important;
+}
+
 .ant-menu {
   color: #ffcb05 !important;
   background: transparent !important;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.copy-ref {
+  position: absolute;
+  bottom: 24px;
+  left: 220px;
+  color: #000002;
 }
