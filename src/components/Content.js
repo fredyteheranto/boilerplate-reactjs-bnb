@@ -7,6 +7,7 @@ import telegram from "../images/telegram.png";
 
 import footer from "../images/footer.png";
 const { TextArea } = Input;
+
 const style = {
   height: 40,
   width: 40,
@@ -22,6 +23,7 @@ const Contenido = () => {
   const [form] = Form.useForm();
   const [collector, setCollector] = useState(0);
   const [wallet, setWallet] = useState("");
+
   const handleClick = (e) => {
     e.preventDefault();
     console.log("The link was clicked.", collector, wallet);
@@ -145,8 +147,38 @@ const Contenido = () => {
                     </Button>
                   </Form.Item>
                 </Col>
-                <Col span={12}>col-12</Col>
+                <Col span={12}>
+                  <Form.Item
+                    name={["user", "introduction"]}
+                    label="Introduction"
+                  >
+                    <Input.TextArea />
+                  </Form.Item>
+                  <Form.Item
+                    label="WALLET"
+                    tooltip={{
+                      title: "Tooltip with customize icon",
+                    }}
+                  >
+                    <Input
+                      placeholder="input placeholder"
+                      onChange={(e) => {
+                        setWallet(e.target.value);
+                      }}
+                    />
+                  </Form.Item>
+                </Col>
               </Row>{" "}
+              <Row>
+                <Col span={24}>
+                  <Form.Item label="Field B">
+                    <Input placeholder="input placeholder" />
+                  </Form.Item>
+                  <Form.Item {...buttonItemLayout}>
+                    <Button type="primary">Submit</Button>
+                  </Form.Item>
+                </Col>
+              </Row>
             </Form>
             <div className="copy-ref">REFERRAL LINK COPY</div>
           </div>
